@@ -73,10 +73,10 @@ app.get('/tweets/:id/edit', (req, res) => {
 
 //D
 app.delete('/tweets/:id', (req, res) => {
-    const { id } = res.params;
+    const { id } = req.params;
     const newTweets = tweets.filter(t => t.id !== id);
     tweets = newTweets;
-    app.redirect('/tweets');
+    res.redirect('/tweets');
 })
 
 

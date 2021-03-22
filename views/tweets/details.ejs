@@ -5,6 +5,8 @@
 <h3><%= tweet.username %> </h3>
 <a href="/tweets">Home</a>
 <a href="/tweets/<%= tweet.id %>/edit">Edit</a>
-<form action="/tweets"></form>
+<form method="POST" action="/tweets/<%= tweet.id %>?_method=DELETE">
+    <button>Delete</button>
+</form>
 
 <%- include('partials/footer') %>
