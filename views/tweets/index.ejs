@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<h1>All the Tweets: </h1>
+<ul>
+    <% for(let t of tweets){ %>
+    <li><%= t.tweet %> - <b><%= t.username %> </b> <a href="/tweets/<%= t.id %>"> Details</a> </li>
+    <% } %>
+</ul>
+<a href="/tweets/new">Create</a>
+<%- include('partials/footer') %>

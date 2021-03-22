@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+<form method="POST" action="/tweets">
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username">
+    </div>
+    <div>
+        <label for="tweet">Tweets:</label>
+        <br>
+        <textarea name="tweet" id="tweet" cols="30" rows="5"></textarea>
+    </div>
+    <button>Submit</button>
+</form>
+<a href="/tweets">Home</a>
+
+<%- include('partials/footer') %>

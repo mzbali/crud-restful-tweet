@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+
+<h1>ID: <%= tweet.id %> </h1>
+<h2><%= tweet.tweet %> </h2>
+<h3><%= tweet.username %> </h3>
+<a href="/tweets">Home</a>
+<a href="/tweets/<%= tweet.id %>/edit">Edit</a>
+<form action="/tweets"></form>
+
+<%- include('partials/footer') %>
