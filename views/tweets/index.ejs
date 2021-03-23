@@ -2,8 +2,12 @@
 <h1>All the Tweets: </h1>
 <ul>
     <% for(let t of tweets){ %>
-    <li><%= t.tweet %> - <b><%= t.username %> </b> <a href="/tweets/<%= t.id %>"> Details</a> </li>
+    <li><%= t.tweet %> - <b><%= t.username %> </b> <a href="/tweets/<%= t.id %>"> Details</a>
+        <button value="<%= t.id %>">Delete</button>
+    </li>
     <% } %>
 </ul>
 <a href="/tweets/new">Create</a>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/app.js"></script>
 <%- include('partials/footer') %>

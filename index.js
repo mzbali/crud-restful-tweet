@@ -9,6 +9,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 let tweets = [
@@ -76,7 +77,7 @@ app.delete('/tweets/:id', (req, res) => {
     const { id } = req.params;
     const newTweets = tweets.filter(t => t.id !== id);
     tweets = newTweets;
-    res.redirect('/tweets');
+    // res.redirect('/tweets');
 })
 
 
